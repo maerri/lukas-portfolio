@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>lukas bärmann – artist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #171717;
+      --gray: #777777;
+      --line: #dedede;
+      --background: #EAE5E0; 
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--black);
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .page {
+      width: 100%;
+      height: 100vh;
+      min-height: 620px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 34px 5vw 25px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .name {
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+    }
+
+    .year {
+      color: var(--gray);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.72rem;
+      padding-top: 5px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      align-items: center;
+      gap: 8vw;
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .intro {
+      max-width: 440px;
+    }
+
+    h1 {
+      font-size: clamp(3.5rem, 8vw, 8.5rem);
+      line-height: 0.88;
+      font-weight: 400;
+      letter-spacing: -0.09em;
+      margin-bottom: 28px;
+    }
+
+    .description {
+      color: var(--gray);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      max-width: 270px;
+      margin-bottom: 34px;
+    }
+
+    .contact {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 7px;
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+      font-size: 0.8rem;
+    }
+
+    .contact a {
+      color: var(--black);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact a:hover {
+      color: var(--gray);
+    }
+
+    .image-wrapper {
+      width: min(100%, 430px);
+      aspect-ratio: 0.76;
+      justify-self: end;
+      overflow: hidden;
+      background: #eeeeee;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.75);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      color: var(--gray);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 700px) {
+      html,
+      body {
+        overflow: auto;
+      }
+
+      .page {
+        min-height: 100svh;
+        height: auto;
+        padding: 24px 22px 20px;
+      }
+
+      header {
+        margin-bottom: 45px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(3.5rem, 18vw, 6rem);
+      }
+
+      .image-wrapper {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 0.82;
+        align-self: center;
+      }
+
+      footer {
+        margin-top: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="name">lukas bärmann</div> <!-- background: EAE5E0 FDF9F7 -->
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>kontakt</h1>
+
+        <p class="description">
+          so erreichst du mich.
+        </p>
+
+        <div class="contact">
+          <a href="mailto:mail@lukasbaermann.de">
+            mail
+          </a>
+
+          <a href="tel:+491234567890">
+            mobil
+          </a>
+
+          <a href="https://www.instagram.com/lukasbaermann" target="_blank">
+            instagram <!-- ↗ -->
+          </a>
+        </div>
+      </section>
+
+      <figure class="image-wrapper">
+        <img src="baechle_color.png" alt="Lukas Bärmann" />
+      </figure>
+    </main>
+
+    <footer>
+      <span>freiburg im breisgau / 2026 / © lukas bärmann</span>
+    </footer>
+
+  </div>
+</body>
+</html>
